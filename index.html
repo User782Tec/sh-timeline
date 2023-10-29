@@ -1,0 +1,87 @@
+<!-- html 模板 -->
+<!DOCTYPE html>
+<html lang="en" style="background-image: url('./素材/bg.jpeg'); background-size: cover; background-position: 50% 50%;">
+
+<head>
+    <meta charset="UTF-8">
+    <title>上海照片·时间轴</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://at.alicdn.com/t/font_1310655_5q2q5q8q8q8.css"> -->
+    <link rel="stylesheet" href="./dist/style.css">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <!-- 引入.\素材\Settings Fluent Icons Regular.otf字体 -->
+    <style>
+        @font-face {
+            font-family: 'Settings Fluent Icons Regular';
+            src: url('./素材/Settings Fluent Icons Regular.otf') format('opentype');
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="show moveLeft" id="show">
+
+        <div class="sidebar">
+            <span class="icon__home">></span>
+            <div id="sidebar" class="components"
+                style="width: 100%;height: 100%;background-color: #e4ebf5;padding: 10px;  overflow-y: auto;">
+
+            </div>
+        </div>
+
+        <h1 id="date" style="grid-column: 5/12;grid-row: 2;font-size: 3em;">
+            拍摄于：我也不知道
+        </h1>
+
+        <p id="introduction" class="typewriter" style="    grid-column: 5/100;
+        grid-row: 3;font-size: 2em;"> </p>
+
+        <div class="shou-sidebar components moveRight-shou-sidebar" id="shou-sidebar"
+            style="padding: 2rem;  left: 98%;">
+            <!-- 78% -->
+            <div class="icon__home home" onclick="hideShow();">
+                <p style="font-family: 'Settings Fluent Icons Regular';"></p>
+
+            </div>
+            <div class="icon__home right" onclick="nextYear();">
+                <p>→</p>
+            </div>
+
+            <div class="icon__home left" onclick="prevYear();">
+                <p>←</p>
+            </div>
+
+            <div class="icon__home up" onclick="prevPhoto();">
+                <p>↑</p>
+            </div>
+
+            <div class="icon__home down" onclick="nextPhoto();">
+                <p>↓</p>
+            </div>
+        </div>
+        <img id="image" class="img"></img>
+    </div>
+
+    <div class="home" style="display: flex; justify-content: center; align-items: center; flex-direction: column; height: 100%; width: 100%">
+        <div class="header__subtitle" style="font-size: 5em; color: white">
+            <h2>上海照片·时间轴</h2>
+        </div>
+
+        <div class="lineMain" style="width: 80%">
+
+            <div class="line chip" id="line" style="background-color: #ffffffee"></div>
+            <div class="tooltip chip" id="tooltip" style="color: #000; font-size: 2em; text-align: center; background: #ffffffee; display: flex; justify-content: center; align-items: center; flex-direction: column;"></div>
+
+            <!-- 在时间轴前端与后端的下方分别标注日期1850，2023 -->
+            <div class="date" style="width: 100%; display: flex; align-items: center; justify-content: space-between; font-size: 2em; color: #fff; text-shadow: black 0px 0px 5px">
+                <p class="date1850">1850</p>
+                <p class="date2023">2023</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>
